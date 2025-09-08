@@ -18,14 +18,14 @@ import base64
 import io
 from PIL import Image
 import cadquery as cq
-# try:
-#     from OCP.STEPControl import STEPControl_Reader
-#     from OCP.IFSelect import IFSelect_RetDone
-#     from OCP.XSControl import XSControl_Reader
-# except ImportError:
-#     st.warning("OpenCascade packages not available. CAD file processing will be limited.")
+try:
+    from OCP.STEPControl import STEPControl_Reader
+    from OCP.IFSelect import IFSelect_RetDone
+    from OCP.XSControl import XSControl_Reader
+except ImportError:
+    st.warning("OpenCascade packages not available. CAD file processing will be limited.")
 
-# Load environment variables
+Load environment variables
 load_dotenv()
 
 # Page configuration
