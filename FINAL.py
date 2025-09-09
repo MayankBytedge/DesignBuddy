@@ -17,15 +17,18 @@ from datetime import datetime
 import base64
 import io
 from PIL import Image
-import cadquery as cq
 try:
+    import cadquery as cq
     from OCP.STEPControl import STEPControl_Reader
     from OCP.IFSelect import IFSelect_RetDone
     from OCP.XSControl import XSControl_Reader
+    CAD_AVAILABLE = True
 except ImportError:
-    st.warning("OpenCascade packages not available. CAD file processing will be limited.")
+    CAD_AVAILABLE = False
+    cq = None
+    # Will show warning in the UI later
 
-Load environment variables
+# Load environment variables
 load_dotenv()
 
 # Page configuration
@@ -257,6 +260,15 @@ def init_session_state():
 
 def extract_cad_dimensions(uploaded_file):
     """Extract dimensions from CAD file using CadQuery"""
+    if not CAD_AVAILABLE:
+        st.warning("⚠️ CAD processing libraries not available. Using default brush dimensions.")
+        return {
+            'length': 50.0,  # mm
+            'width': 20.0,   # mm
+            'height': 180.0, # mm
+            'volume': 18.0   # cm³
+        }
+    
     try:
         with tempfile.NamedTemporaryFile(delete=False, suffix='.step') as tmp_file:
             tmp_file.write(uploaded_file.read())
