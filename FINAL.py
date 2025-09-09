@@ -969,8 +969,8 @@ def main():
                 display_3d_model("carton.gltf", "Carton", "Shipping carton with meshing")
             
             # Button to run ISTA simulation
-            if st.button("🚀 Run ISTA Simulation", type="primary"):
-                st.success("Proceeding to ISTA Testing...")
+            # if st.button("🚀 Run ISTA Simulation", type="primary"):
+            #     st.success("Proceeding to ISTA Testing...")
     
     with tab4:
         st.header("🧪 ISTA Testing Analysis")
