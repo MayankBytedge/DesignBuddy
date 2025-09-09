@@ -266,7 +266,7 @@ def extract_cad_dimensions(uploaded_file):
             'length': 50.0,  # mm
             'width': 20.0,   # mm
             'height': 180.0, # mm
-            'volume': 18.0   # cm³
+            'volume': 180.0   # cm³
         }
     
     try:
