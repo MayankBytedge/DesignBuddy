@@ -21,3 +21,14 @@ requests
 pytest
 black
 flake8
+google-generativeai
+matplotlib
+numpy
+pandas
+Pillow
+plotly
+python-dotenv
+requests
+scipy
+seaborn
+streamlit
