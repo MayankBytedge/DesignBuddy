@@ -1,3 +1,4 @@
+Loading CAD file...
 # Design Buddy - Conversational CAD Packaging Analysis with AI
 import streamlit as st
 import pandas as pd
@@ -524,12 +525,13 @@ def extract_cad_dimensions(uploaded_file):
             tmp_file_path = tmp_file.name
         
         # Show loading message
-        progress_bar = st.progress(10)
-        status_text = st.empty()
+        # progress_bar = st.progress(10)
+        # status_text = st.empty()
         
         # Loading CAD file
         status_text.text("Loading CAD file...")
         progress_bar.progress(30)
+        
         # time.sleep(0)
         
         # Import CAD file
