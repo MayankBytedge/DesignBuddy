@@ -1164,6 +1164,7 @@ def main():
             
             # Display 3D model
             display_3d_model("full_brush.gltf", "3D Model Visualization", "Original brush model")
+            st.success("✅ Head to design chat for material selection!")
             
             # Navigation button
             col1, col2 = st.columns([3, 1])
