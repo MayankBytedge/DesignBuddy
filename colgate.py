@@ -36,7 +36,7 @@ st.markdown("""
 <style>
     /* Main header styling */
     .main-header {
-        background:linear-gradient(135deg, red, #9990 100%);
+        background:linear-gradient(135deg, red, #900 100%);
         padding: 2rem;
         border-radius: 10px;
         color: white;
