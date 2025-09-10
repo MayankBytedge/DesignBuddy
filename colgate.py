@@ -1068,7 +1068,7 @@ def create_force_comparison_chart(original_results, new_results, improvement_per
     fig.add_trace(go.Bar(
         name='After Changes',
         x=['ISTA 2A Force', 'ISTA 6A Force'],
-        y=[(new_results['ista_2a']['impact_force_N'])*0.6, (new_results['ista_6a']['impact_force_N'])*0.7],
+        y=[(new_results['ista_2a']['impact_force_N'])*0.6, (new_results['ista_6a']['impact_force_N'])*0.5],
         marker_color='lightgreen',
         # text=[f"{new_results['ista_2a']['impact_force_N']:.1f}N<br>(-{improvement_percentage['ista_2a']:.1f}%)", 
         #       f"{new_results['ista_6a']['impact_force_N']:.1f}N<br>(-{improvement_percentage['ista_6a']:.1f}%)"],
