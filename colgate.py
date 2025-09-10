@@ -1,4 +1,4 @@
-Loading CAD file...
+
 # Design Buddy - Conversational CAD Packaging Analysis with AI
 import streamlit as st
 import pandas as pd
