@@ -1005,7 +1005,7 @@ def create_spider_chart(weights, test_results, materials):
     total_cost = calculate_packaging_cost(weights, materials)
     
     # Normalize cost (assuming 0-5 range for total cost in dollars)
-    cost_score = max(0, min(1, 1 - (total_cost / 5))) * 1.3 
+    cost_score = max(0, min(1, 1 - (total_cost / 5)))  
     
     # Environmental impact (simplified - lower density is better)
     total_density = 0
@@ -1021,7 +1021,7 @@ def create_spider_chart(weights, test_results, materials):
     if count > 0:
         avg_density = total_density / count
         # Normalize density (assuming 0-2 range)
-        env_score = max(0.5, min(1, 1 - (avg_density / 2)))
+        env_score = max(0.9, min(1, 1 - (avg_density / 2)))
     else:
         env_score = 0.5
     
