@@ -524,7 +524,7 @@ def extract_cad_dimensions(uploaded_file):
             tmp_file_path = tmp_file.name
         
         # Show loading message
-        progress_bar = st.progress(0)
+        progress_bar = st.progress(10)
         status_text = st.empty()
         
         # Loading CAD file
@@ -542,8 +542,8 @@ def extract_cad_dimensions(uploaded_file):
         
         # Analyzing CAD file
         status_text.text("Analyzing CAD file...")
-        progress_bar.progress(70)
-        time.sleep(1)
+        # progress_bar.progress(70)
+        # time.sleep(1)
         
         # Get bounding box
         bb = result.val().BoundingBox()
