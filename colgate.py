@@ -530,7 +530,7 @@ def extract_cad_dimensions(uploaded_file):
         # Loading CAD file
         status_text.text("Loading CAD file...")
         progress_bar.progress(30)
-        time.sleep(1)
+        # time.sleep(0)
         
         # Import CAD file
         try:
