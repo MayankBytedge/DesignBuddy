@@ -1195,18 +1195,22 @@ def main():
 
         # Display chat history
         for message in st.session_state.chat_history:
-            if message["role"] == "user":
-                st.markdown(f"""
-                <div class="chat-message user-message">
-                    <strong>👤 You:</strong> {message["content"]}
-                </div>
-                """, unsafe_allow_html=True)
-            else:
-                st.markdown(f"""
-                <div class="chat-message bot-message">
-                    <strong>🤖 Design Buddy:</strong> {message["content"]}
-                </div>
-                """, unsafe_allow_html=True)
+            for m in st.session_state.chat_history:
+                role = "user 👤" if m["role"] == "user 👤" else "assistant 🤖"
+                with st.chat_message(role):
+                    st.markdown(m["content"]) 
+            # if message["role"] == "user":
+            #     st.markdown(f"""
+            #     <div class="chat-message user-message">
+            #         <strong>👤 You:</strong> {message["content"]}
+            #     </div>
+            #     """, unsafe_allow_html=True)
+            # else:
+            #     st.markdown(f"""
+            #     <div class="chat-message bot-message">
+            #         <strong>🤖 Design Buddy:</strong> {message["content"]}
+            #     </div>
+            #     """, unsafe_allow_html=True)
         
         # Material selection interface
         st.subheader("🔧 Material Selection")
