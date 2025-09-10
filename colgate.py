@@ -17,7 +17,7 @@ from datetime import datetime
 import base64
 import io
 from PIL import Image
-import cadquery as cq
+# import cadquery as cq
 
 # Load environment variables
 load_dotenv()
