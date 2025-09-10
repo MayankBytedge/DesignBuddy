@@ -449,10 +449,10 @@ def initialize_gemini():
             genai.configure(api_key=api_key)
             return genai.GenerativeModel("gemini-2.0-flash-exp")
         else:
-            st.warning("⚠️ Gemini API key not found in .env file")
+            st.warning("⚠️  key not found ")
             return None
     except Exception as e:
-        st.warning(f"⚠️ Gemini AI initialization failed: {e}")
+        st.warning(f"⚠️ AI initialization failed: {e}")
         return None
 
 def init_session_state():
@@ -2126,7 +2126,7 @@ def main():
     
     # Footer
     st.markdown("---")
-    st.markdown("**Design Buddy** - AI-Powered Packaging Design Assistant | Built with Streamlit & Gemini AI")
+    st.markdown("**Design Buddy** - AI-Powered Packaging Design Assistant ")
 
 if __name__ == "__main__":
     main()
