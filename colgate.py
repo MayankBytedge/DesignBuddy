@@ -1023,7 +1023,7 @@ def create_spider_chart(weights, test_results, materials):
         # Normalize density (assuming 0-2 range)
         env_score = max(0.9, min(1, 1 - (avg_density / 2)))
     else:
-        env_score = 0.5
+        env_score = 0.7
     
     # Create spider chart
     categories = ['Weight Efficiency', 'ISTA 2A', 'ISTA 6A', 'Cost Efficiency', 'Environmental Impact']
