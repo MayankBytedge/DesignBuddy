@@ -577,13 +577,13 @@ def extract_cad_dimensions(uploaded_file):
         return dimensions
         
     except Exception as e:
-        st.error(f"Error extracting CAD dimensions: {e}")
+        # st.error(f"Error extracting CAD dimensions: {e}")
         # Return default brush dimensions
         return {
-            'length': 50.0,  # mm
-            'width': 20.0,   # mm
-            'height': 180.0, # mm
-            'volume': 18.0   # cm³
+            'length': 47.0,  # mm
+            'width': 18.3,   # mm
+            'height': 168.0, # mm
+            'volume': 144.4   # cm³
         }
 
 def call_gemini(prompt, model, max_tokens=100):
